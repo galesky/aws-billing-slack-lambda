@@ -1,0 +1,24 @@
+service: aws-billing-slack-lambda
+
+frameworkVersion: '>=1.2.0 <2.0.0'
+
+region: 'sa-east-1'
+provider:
+  name: aws
+  runtime: python3.8
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - 'ce:GetCostAndUsage'
+        - 'ce:GetCostForecast'
+      Resource: '*'
+functions:
+  cron:
+    handler: main.lambda_handler
+    events:
+      # On this example Invoke Lambda function every Hour,
+      # you can use Rate or CRON like syntax to setup different schedules as described here:
+      # https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html
+      - schedule: rate(1 hour)
+plugins:
+  - serverless-python-requirements

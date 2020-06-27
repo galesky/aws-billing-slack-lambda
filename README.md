@@ -1,6 +1,6 @@
 # AWS billing scheduled Bot for Slack
 
-Simple AWS Lambda powered Slack bot that reports your current AWS Billing to a channel
+Simple AWS Lambda powered Slack bot that reports your AWS Costs for the current month to a channel
 ![Image of Yaktocat](./assets/slack_bot_message.png)
 * Fully customizable schedule
 * Simple setup

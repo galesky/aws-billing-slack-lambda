@@ -35,5 +35,5 @@ Simple AWS Lambda powered Slack bot that reports your AWS Costs for the current 
 * You can simply test the lambda, with any test event, using the AWS Console;
 
 * **Why dont you use Environment Variables ?**
-* The ideia is to be as straightforward as possible; The code is so tiny that you could update it straight from the AWS console itself;
+* The idea is to be as straightforward as possible; The code is so tiny that you could update it straight from the AWS console itself;
 
